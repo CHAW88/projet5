@@ -31,18 +31,20 @@ console.log(bannerTagLine)
 /*ajout de la fonction de défilemnet*/
  const arrow_left= document.querySelector('.arrow_left')
  arrow_left.addEventListener("click",()=>{
-	console.log(arrow_left)
+	// console.log(arrow_left)
+	previousSlide()
  })
 
  const arrow_right= document.querySelector('.arrow_right')
 arrow_right.addEventListener("click",()=>{
-	console.log(arrow_right)
+	// console.log(arrow_right)
+	nextSlide()
 })
 	
 
 //Étape 3:  Ajoutez des bullet points au slider
 const dotsSlides= document.querySelector('.dots')
-console.log(dotsSlides)
+// console.log(dotsSlides)
 /*Utilisation d'une boucle for pour compter le nombre d'images dans le tableau 
 slide afin d'avoir le même nombre de points et parcourir chaque élément du tableau */
 for (let i = 0; i < slides.length; i++) {
@@ -68,7 +70,6 @@ function showSlide() {
 }
 showSlide()
 
-arrow_left.addEventListener("click",previousSlide)
 function previousSlide() {
 	// Suppression du point actuel sélectionné 
 	dotSelected[count].classList.remove("dot_selected");
@@ -86,8 +87,6 @@ function previousSlide() {
 	// Appelle à la fonction qui affiche le slider 
 	showSlide()
 }
-
-arrow_right.addEventListener("click",nextSlide)
 
 function nextSlide() {
 	// Suppression du point sélectionné actuel
